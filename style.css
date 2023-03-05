@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.mainDiv {
+    display: grid;
+    /* grid-template-rows: 70px 200px auto 70px; */
+    grid-template-areas: "navbar navbar navbar navbar navbar navbar"
+        " menu header header header header header"
+        "menu content content content content content"
+        "footer footer footer footer footer footer";
+    min-height: 100vh;
+     min-width: 100%;
+    /* position: relative; */
+
+}
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 5px;
+    margin-right: 20px;
+
+}
+.navbar ul{
+    display: flex;
+    gap: 20px;
+    /* align-items: center; */
+    /* margin-left: 90px; */
+    list-style: none;
+    /* justify-content: right; */
+
+    
+
+}
+.navbar ul li{
+    border-radius: 10px;
+    /* border: 1px solid; */
+    padding: 10px;
+    background-color: lightcoral;
+    /* position: relative;  */
+    /* display: inline-block; */
+    /* justify-content: end; */
+
+
+
+
+}
+.navbar ul li:hover{
+    background-color: lightgrey;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: lightskyblue;
+    width: 140px;
+    display: flex;
+}
+.menu ul{
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.menu ul li{
+    border: 1px solid;
+    border-radius: 10px;
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+    margin-top: 30px;
+    background-color: lightcoral;
+}
+.menu ul li:hover{
+    background-color: lightgray;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.header {
+    grid-area: header;
+    background-color: lightgrey;
+    padding: 50px;
+}
+.header h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive;
+    color: lightcoral;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 50px;
+}
+.header p{
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    color: lightcoral;
+    padding: 20px;
+
+}
+
+.content {
+    grid-area: content;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 2fr 2fr;
+    gap: 5px;
+}
+
+.content-item {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.content-item img{
+   width: 100%;
+   height: 100%;
+   display: block;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightgrey;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
