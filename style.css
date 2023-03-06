@@ -20,8 +20,8 @@ body, html {
     min-height: 100vh;
      min-width: 100%;
     /* position: relative; */
-
 }
+
 
 .navbar {
     grid-area: navbar;
@@ -47,8 +47,6 @@ body, html {
     list-style: none;
     /* justify-content: right; */
 
-    
-
 }
 .navbar ul li{
     border-radius: 10px;
@@ -58,10 +56,6 @@ body, html {
     /* position: relative;  */
     /* display: inline-block; */
     /* justify-content: end; */
-
-
-
-
 }
 .navbar ul li:hover{
     background-color: lightgrey;
@@ -100,6 +94,33 @@ body, html {
     text-decoration: none;
     font-weight: bold;
     color: white;
+}
+
+/* responsive bir yaklaşım için media qurey ekliyorum */
+@media (max-width:678px) {
+    .mainDiv {
+        display: grid;
+        /* grid-template-rows: 70px 200px auto 70px; */
+        grid-template-areas: "navbar navbar navbar navbar navbar navbar"
+            " header header header header header header"
+            "content content content content content content"
+            " menu menu menu menu menu menu"
+            "footer footer footer footer footer footer";
+        min-height: 100vh;
+         min-width: 100%;
+        /* position: relative; */
+    
+    }
+    .menu {
+        width: 100%;
+
+    }
+    .menu ul{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .header {
